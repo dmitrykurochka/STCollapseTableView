@@ -27,6 +27,12 @@
  * THE SOFTWARE.
  *
  ***********************************************************************************/
+@class STCollapseTableView;
+@protocol STCollapseTableDelegate <UITableViewDelegate>
+@optional
+-(void)table:(STCollapseTableView*)table didColapseSection:(NSInteger)section;
+-(void)table:(STCollapseTableView*)table didExpandSection:(NSInteger)section;
+@end
 
 #import <UIKit/UIKit.h>
 
@@ -37,6 +43,11 @@
  *  By default all the sections are closed.
  */
 @interface STCollapseTableView : UITableView
+
+/**
+ *	This delegate for expanding/collapsing events and standard table delegate methods.
+ */
+@property (nonatomic, weak, nullable) id <STCollapseTableDelegate> delegate;
 
 /**
  *	This property allow to enable/disable the exclusivity.
