@@ -145,6 +145,9 @@
         if ([self.delegate respondsToSelector:@selector(table: didExpandSection:)]) {
             [self.delegate table:self didExpandSection:sectionIndex];
         }
+        if ([self.delegate respondsToSelector:@selector(table: didColapseSection:)] && openedSection != NSNotFound) {
+            [self.delegate table:self didColapseSection:openedSection];
+        }
 		[self setSectionAtIndex:openedSection open:NO];
         
         if(animated)
