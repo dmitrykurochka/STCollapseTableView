@@ -142,7 +142,9 @@
         NSUInteger openedSection = [self openedSection];
         
 		[self setSectionAtIndex:sectionIndex open:YES];
-        [self.delegate table:self didExpandSection:sectionIndex];
+        if ([self.delegate respondsToSelector:@selector(table: didExpandSection:)]) {
+            [self.delegate table:self didExpandSection:sectionIndex];
+        }
 		[self setSectionAtIndex:openedSection open:NO];
         
         if(animated)
@@ -178,7 +180,9 @@
     else
     {
 		[self setSectionAtIndex:sectionIndex open:YES];
-        [self.delegate table:self didColapseSection:sectionIndex];
+        if ([self.delegate respondsToSelector:@selector(table: didExpandSection:)]) {
+            [self.delegate table:self didExpandSection:sectionIndex];
+        }
 		if (animated)
         {
             NSArray* indexPathsToInsert = [self indexPathsForRowsInSectionAtIndex:sectionIndex];
@@ -194,7 +198,9 @@
 - (void)closeSection:(NSUInteger)sectionIndex animated:(BOOL)animated
 {
     [self setSectionAtIndex:sectionIndex open:NO];
-    [self.delegate table:self didColapseSection:sectionIndex];
+    if ([self.delegate respondsToSelector:@selector(table: didColapseSection:)]) {
+        [self.delegate table:self didColapseSection:sectionIndex];
+    }
 
 	if (animated)
     {
