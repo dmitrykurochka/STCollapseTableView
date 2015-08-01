@@ -170,7 +170,6 @@
             [self insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:insertAnimation];
             [self deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:deleteAnimation];
             [self endUpdates];
-            [self.delegate table:self didExpandSection:sectionIndex];
         }
         else
         {
