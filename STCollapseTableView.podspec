@@ -1,6 +1,6 @@
 IPod::Spec.new do |s|
   s.name         = "STCollapseTableView"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "A UITableView subclass that automatically collapse and/or expand your sections."
   s.description  = <<-DESC
                     A UITableView subclass that automatically collapse and/or expand your sections.
@@ -10,7 +10,7 @@ IPod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "iSofTom" => "thomas@isoftom.com" }
 
-  s.source       = { :git => "https://github.com/dmitrykurochka/STCollapseTableView.git", :tag => ‘0.1.3’ }
+  s.source       = { :git => "https://github.com/dmitrykurochka/STCollapseTableView.git", :tag => ‘0.1.4’ }
   s.platform     = :ios, '5.0'
 
   s.source_files = 'STCollapseTableView/*.{h,m}'
