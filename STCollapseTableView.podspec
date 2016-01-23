@@ -10,7 +10,7 @@ IPod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "iSofTom" => "thomas@isoftom.com" }
 
-  s.source       = { :git => "https://github.com/dmitrykurochka/STCollapseTableView.git", :tag => ‘v0.1.3’ }
+  s.source       = { :git => "https://github.com/dmitrykurochka/STCollapseTableView.git", :tag => ‘0.1.3’ }
   s.platform     = :ios, '5.0'
 
   s.source_files = 'STCollapseTableView/*.{h,m}'
