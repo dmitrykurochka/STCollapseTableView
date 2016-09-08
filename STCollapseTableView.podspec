@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "STCollapseTableView"
-  s.version      = "0.1.2"
+  s.version      = "1.0"
   s.summary      = "A UITableView subclass that automatically collapse and/or expand your sections."
   s.description  = <<-DESC
                     A UITableView subclass that automatically collapse and/or expand your sections.
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "iSofTom" => "thomas@isoftom.com" }
 
-  s.source       = { :git => "https://github.com/dmitrykurochka/STCollapseTableView.git", :commit => 'HEAD' }
+  s.source       = { :git => "https://github.com/dmitrykurochka/STCollapseTableView.git", :tag => '1.0' }
   s.platform     = :ios, '5.0'
 
   s.source_files = 'STCollapseTableView/*.{h,m}'
